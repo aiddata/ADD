@@ -1,0 +1,315 @@
+/*
+    #071A2C; rgb(7,26,44); dark-blue
+    #83A41C; rgb(131,164,28); country-green
+
+    #586C80; rgb(88,108,128); blue-grey
+    #D5E2EE; rgb(213,226,238); light-blue-grey
+    #A1B224; rgb(161,178,36);  green-olive
+    #F6FFB4; rgb(246,255,180); white-tan
+    #CC4C43; rgb(204,76,67);  red
+    #B28B88; rgb(178,139,136); light-red
+*/ 
+
+body {
+    /*min-width: 710px;*/
+    /*width:100%;*/
+    /*height:100%;*/
+    /*padding-bottom: 50px;*/
+    color: white;
+    /*background: linear-gradient(to right, #1e5799 0%,#657d9b 0%,#526b80 19%,#526b80 48%,#526b80 74%,#657d9b 100%);*/
+    /*background: linear-gradient(to right, rgba(88,108,128,0.85), rgba(88,108,128,1), rgba(88,108,128,1), rgba(88,108,128,1), rgba(88,108,128,0.85));*/
+
+    /*background:  rgb(88,108,128);*/
+    background: rgb(223,223,223);
+    /*background: rgb(100,100,100);*/
+
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, a:hover, a:active, a:focus, a:visited, select{
+    outline: 0;
+    outline: none;
+    outline-style: none;
+    text-decoration: none;
+    /*color: black;*/
+}
+
+a:hover{
+    /*color:rgb(0,255,255);*/ 
+}
+
+/*remove select outline in firefox*/
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #FFF;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+#intro_form_container, #intro_tabs_container, #intro_carousel_container {
+    /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJ0lEQVQImU3IsQ0AMAzDsPx/mb/gKe5QBMiggRp0S9K5wB8LdC7QB4P7OK2+qh5xAAAAAElFTkSuQmCC) repeat;*/
+    /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKUlEQVQImWO4f//+fxhml9T5z4DMuX//PkQAxrl///5/BmTO/fv3/wMAaOAwfYoDF7QAAAAASUVORK5CYII=) repeat;*/
+    /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJ0lEQVQImWOIyGn4D8NskjpnGJA5ETkN/xmQORE5Df8ZkDkROQ3/AR6AH4GEIyRxAAAAAElFTkSuQmCC) repeat;*/
+    /*background: rgba(223,223,223,1);*/
+    background: rgba(245,245,245,1);
+}
+
+#intro_form, #intro_map, #intro_tabs, #intro_carousel{
+    width: 70%;
+    margin: 0px 15%;
+    color:black;
+}
+
+/* -------------------------------------------------- */
+/* intro form (and general use form style) */
+    #intro_form .form {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        /*color: rgb(255,255,255);*/
+        color:black;
+        /*font-family: Arial, Helvetica, sans-serif;*/
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.1em;
+        line-height: 2.1;
+    }
+
+        #intro_form_logo {
+            position: relative;
+            top: 4px;
+            cursor: pointer;
+        }
+
+
+        .form select {
+            border: 1px solid black;
+            border-radius: 5px;
+            /*background: rgba(155,155,155,1);*/
+            background: rgba(205,205,205,1);
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            display: inline-block;:
+            padding: 0;
+            padding-left: 5px;
+            margin: 0;
+            text-align: center;
+            display: inline-block;
+            color: rgb(255,255,255);
+            cursor: pointer;
+        }
+
+        .form .form_option_1 {
+            color: rgb(204,76,67); /*red*/     
+        }
+
+        .form .form_option_2 {
+            color:rgb(44,155,200); /*blue*/
+
+        }
+
+        .variable {
+            color: rgb(161,178,36);;
+    /*        color:red;
+            color: rgb(255,255,255);
+            text-decoration: underline;
+            text-shadow:
+                -1px -1px 0 rgb(204,76,67),  
+                1px -1px 0 rgb(204,76,67),
+                -1px 1px 0 rgb(204,76,67),
+                1px 1px 0 rgb(204,76,67);*/
+        }
+
+
+/* -------------------------------------------------- */
+/* intro map */
+
+#intro_map_container{
+    background: white;
+}
+
+    #intro_map {
+        /*margin:0;*/
+        /*width: 1000px;*/
+        overflow:hidden;
+        /*background: #FFFFFF;*/
+        position:relative;
+        /*border:2px solid #000;*/
+        /*border-radius: 5px;*/
+       /* -webkit-box-shadow: 0 0 10px rgb(161,178,36);;
+        -moz-box-shadow: 0 0 10px rgb(161,178,36);;
+        box-shadow: 0 0 10px rgb(161,178,36);;*/
+    }
+
+    .map_country {
+        fill: #dfdfdf;
+        stroke: #d4d4cd;
+        stroke-width: .5px;
+        stroke-linejoin: round; 
+    }
+
+    .map_countrySelected {
+        cursor: pointer;
+        fill: rgb(246,255,180);/*rgb(131,164,28);*/ 
+    }
+
+    .map_countrySelected_hover, .map_countrySelected:hover {
+      fill: rgb(131,164,28);/*rgb(0,0,255);*/
+      stroke: #000000;
+      stroke-width: 1;
+      stroke-linejoin: round; 
+    }
+
+    .map_info_container{
+        position: absolute;
+        /*z-index: 1;*/
+        width: 96px;
+        height: 96px;
+    }
+
+    .map_info {
+        cursor: pointer;
+        position:relative;
+        float:left;
+        width: 100%;
+        height: 100%;
+        border: 5px solid rgba(255,255,255,0.5); /*rgba(19,135,255,1);*/
+        /*border-radius: 5px;*/
+        /*padding: 2px 10px 2px 2px;*/
+        /*background: rgb(246,255,180);*/
+        background: white;
+        /*font-family: 'Open Sans Condensed', sans-serif;*/
+        color: black;
+        font-size: 1.0em;
+        /*line-height: 26px;*/
+        border-radius: 50%;
+        /*z-index: 2;*/
+    }
+
+    .map_info_hover, .map_info:hover{
+        border: 5px solid rgba(230,0,0,0.65);
+        /*background: rgb(161,178,36);*/
+        /*background: rgba(230,0,0,0.65);*/
+/*        -moz-box-shadow:    inset 0 0 15px 10px rgb(161,178,36);
+        -webkit-box-shadow: inset 0 0 15px 10px rgb(161,178,36);
+        box-shadow:         inset 0 0 15px 10px rgb(161,178,36);*/
+
+    }
+        .map_info_hover .map_title a, .map_info:hover .map_title a{
+            color: rgb(246,255,180);
+            background: rgb(52,122,25);
+            border: 2px solid rgb(52,122,25);
+            border-radius:20px;
+        }
+
+    .map_title {
+        height: 100%;
+        width:100%;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: bold;
+        color: rgb(52,122,25); 
+        float:left;
+    }
+        .map_title a {
+            color: inherit; 
+            position:relative;
+            top:40%;
+            left:110%;
+            padding:2px 7px;
+        }
+
+    .map_image{
+        /*float:left;*/
+        background-size: contain; 
+        /*background-position: center; */
+        background-repeat: no-repeat;
+        position:absolute; 
+    }
+
+    .map_center {
+        height: 20px;
+        width:100%;
+        z-index: 9999;
+        position: absolute;
+        top:55px;
+        text-align: center;
+        /*vertical-align: middle;*/
+        font-family: 'Abel', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color:white;
+
+    }
+
+    .map_chart{
+        width:80px;
+        height:80px;
+        float:left;
+        position: absolute;
+        top:2.5px;
+        left:2.5px;
+        z-index: 1;
+    }
+
+        .highcharts-container,
+        .highcharts-container svg {
+            overflow: visible !important;
+            /*position: inherit !important;*/
+            z-index: 0 !important;
+        }
+
+        .highcharts-container:hover { 
+            /*z-index: 99 !important; */
+        }
+
+        .highcharts-tooltip {
+            /*position: relative;*/
+            z-index: 99 !important;
+        }
+
+
+    @media (max-width: 1275px){
+        .map_info{
+            height:0px;
+            width:0px;
+            margin-top: 40%;
+            background: rgba(0,0,0,0);  
+            border: 0;
+        }
+
+        .map_image, .map_chart, .map_center {
+            display:none;
+        }
+
+        .map_title a{
+            background: rgb(246,255,180);
+            border: 2px solid rgb(246,255,180);
+            border-radius:20px;
+        }
+
+        .map_info_hover, .map_info:hover{
+            -moz-box-shadow:    0 0 0 0 rgba(0,0,0,0);
+            -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            box-shadow:         0 0 0 0 rgba(0,0,0,0);
+            border: 0px;
+        }
+    }
+
+
+/* -------------------------------------------------- */
+/* tabs */
+#intro_tabs{} /* USE jcarousel.css*/
+
+
+/* -------------------------------------------------- */
+/* carousel */
+#intro_carousel{} /* USE jcarousel.css*/
+
+
+/* -------------------------------------------------- */
+/* content */
+#content{} /* USE grid.css */

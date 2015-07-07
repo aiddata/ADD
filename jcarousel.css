@@ -1,0 +1,261 @@
+/* -------------------------------------------------- */
+/*tabs*/
+
+#intro_tabs{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#intro_tabs>.row {
+	background: rgba(0,0,0,1);
+    margin-bottom: 0;
+}
+
+.jcarousel-tab-container{
+    height: 35px;
+    padding: 0px;
+    margin-bottom: 4px;    
+}
+
+.jcarousel-tab{
+    padding: 0px;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    line-height: 35px;
+    font-size: 22px;
+    cursor:pointer;
+}
+
+.jcarousel-tab-container{
+    background: rgba(245,245,245,1)
+}
+
+/*non-active tabs alternating background (*/
+/*.jcarousel-tab-container:nth-child(odd){
+	background: rgb(255,255,255)
+}
+
+.jcarousel-tab-container:nth-child(even){
+	background: rgb(245,245,245)
+}*/
+
+/*active tab*/
+.jcarousel-tab-active{
+    font-weight: bold;
+}
+
+    .jcarousel-tab-active #jcarousel-general{
+        color: white;
+        background: rgb(150,150,150); /*gray*/
+    }
+
+    .jcarousel-tab-active #jcarousel-country{
+        color: white;
+        background: rgb(161,178,36); /*green*/  
+    }
+
+    .jcarousel-tab-active #jcarousel-analysis{
+        color: white;
+        background: rgb(44,155,200); /*blue*/        
+    }
+
+    .jcarousel-tab-active #jcarousel-data{
+        color: white;
+        background: rgb(204,76,67);   /*red*/     
+    }
+
+
+/*tab border*/
+#jcarousel-general{
+    border-bottom: 5px solid rgb(150,150,150);
+}
+
+#jcarousel-country{
+    border-bottom: 5px solid rgb(161,178,36); /*green*/
+}
+
+#jcarousel-analysis{
+    border-bottom: 5px solid rgb(44,155,200); /*blue*/
+}
+
+#jcarousel-data{
+    border-bottom: 5px solid rgb(204,76,67); /*red*/
+}
+
+/*tab text color and carousel title text color*/
+#jcarousel-general, .jcarousel-general .jcarousel-title{
+    color:rgb(100,100,100);
+}
+
+#jcarousel-country, .jcarousel-country .jcarousel-title {
+    color: rgb(161,178,36); /*green*/
+}
+
+#jcarousel-analysis, .jcarousel-analysis .jcarousel-title {
+    color: rgb(44,155,200); /*blue*/
+}
+
+#jcarousel-data, .jcarousel-data .jcarousel-title {
+    color: rgb(204,76,67); /*red*/
+}
+
+
+/* -------------------------------------------------- */
+/*carousel*/
+
+#intro_carousel_container{
+    padding-bottom: 100px;
+}
+
+    .jcarousel-wrapper {
+        margin: 0;
+        position: relative;
+        /*border: 1px solid #fff;*/
+    /*    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 2px #999;
+        -moz-box-shadow: 0 0 2px #999;
+        box-shadow: 0 0 2px #999;*/
+    }
+
+    /*actual carousel*/
+    .jcarousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+    }
+
+    .jcarousel ul {
+        width: 20000em;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .jcarousel li {
+        /*width: 200px;*/
+        float: left;
+        /*border: 1px solid #fff;*/
+    /*    -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;*/
+    }
+
+    .jcarousel-content {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 0 2px;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100px !important;
+        padding: 5px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background: rgba(255,255,255,1);
+        /*color: black;*/
+    }
+
+    .jcarousel-title{
+    /*    color: blue;*/
+        font-weight: bold;
+        margin: auto;
+        display: table;
+        cursor: pointer;
+    }
+
+    .jcarousel-info span{
+        font-size: 12px;
+        color:black;
+        text-align: left;
+        display: block;
+    }
+
+
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 4px rgb(150,150,150); /*#F0EFE7;*/
+    -moz-box-shadow: 0 0 4px rgb(150,150,150); /*#F0EFE7;*/
+    box-shadow: 0 0 4px rgb(150,150,150); /*#F0EFE7;*/
+}
+
+.jcarousel-control-prev {
+    left: -35px;
+}
+
+.jcarousel-control-next {
+    right: -35px;
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    /*left: 50%;*/
+   /* -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);*/
+    margin: 0;
+}
+
+    @media (max-width: @screen-xs-max){
+        .jcarousel-pagination{
+            display: none;
+        }   
+    }
+
+    .jcarousel-pagination a {
+        text-decoration: none;
+        display: inline-block;
+
+        font-size: 11px;
+        height: 10px;
+        width: 10px;
+        line-height: 10px;
+
+        background: #fff;
+        color: #4E443C;
+        border-radius: 10px;
+        text-indent: -9999px;
+
+        margin-right: 7px;
+
+
+        -webkit-box-shadow: 0 0 2px #000; /*#4E443C;*/
+        -moz-box-shadow: 0 0 2px #000; /*#4E443C;*/
+        box-shadow: 0 0 2px #000; /*#4E443C;*/
+    }
+
+    .jcarousel-pagination a.active {
+        background: #4E443C;
+        color: #fff;
+        opacity: 1;
+
+        -webkit-box-shadow: 0 0 2px rgb(150,150,150); /*#F0EFE7;*/
+        -moz-box-shadow: 0 0 2px rgb(150,150,150); /*#F0EFE7;*/
+        box-shadow: 0 0 2px rgb(150,150,150); /*#F0EFE7;*/
+    }
